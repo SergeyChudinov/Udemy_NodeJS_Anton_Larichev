@@ -30,7 +30,7 @@ console.log(myEmmiter.getMaxListeners());// теперь 1
 console.log(myEmmiter.listenerCount('msg')); // сколько лисенеров на 'msg' => 2
 console.log(myEmmiter.listenerCount('off')); // 'off' => 0, так как он сработал и удалился => once 
 console.log(myEmmiter.listeners('msg')); // выведит саму функцию => [ [Function (anonymous)] ] 
-console.log(myEmmiter.eventNames()); // покажет текущие события!
+console.log(myEmmiter.eventNames()); // покажет текущие события! =>  [ 'msg' ]
 
 myEmmiter.on('error', (err) => { // будет работать без этого кода!
 	console.log(`Произошла ошибка: ${err.message}`);
